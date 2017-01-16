@@ -28,6 +28,7 @@ figure.small {
   width: calc(50vh - 2.5px);
   height: calc(50vh - 2.5px);
 }
+
 .big#img1 {
   background-image: url(../../img/1.jpg);
 }

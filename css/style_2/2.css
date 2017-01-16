@@ -1,0 +1,140 @@
+.menu {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.menu a {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  color: #bfbfbf;
+  text-decoration: none;
+}
+
+.header,
+.footer {
+  width: 100%;
+  height: 40px;
+  opacity: 0,1;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+}
+
+.footer:hover {
+  background: #262626;
+}
+
+.footer:hover a {
+  color: #cccccc;
+}
+
+.footer {
+  box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.50);
+}
+
+.header div,
+.footer div {
+  display: flex;
+  height: 38px;
+  align-items: center;
+}
+.header div {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 0 20px;
+}
+
+.footer div {
+  justify-content: center;
+}
+
+
+figure {
+  display: inline-block;
+  background-size: cover;
+}
+
+div.gallery {
+  height: calc(100vh - 80px);
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 40px;
+  z-index: 0;
+}
+
+div.small {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  justify-content: space-between;
+  padding: 0 5px 0 5px;
+}
+
+figure.big {
+  width: calc(100vh - 80px);
+  height: calc(100vh - 80px);
+}
+
+figure.small {
+  width: calc(50vh - 42.5px);
+  height: calc(50vh - 42.5px);
+}
+
+
+
+
+.big#img1 {
+  background-image: url(../../img/1.jpg);
+}
+
+.big#img2 {
+  background-image: url(../../img/2.jpg);
+}
+
+.big#img3 {
+  background-image: url(../../img/3.jpg);
+}
+
+.big#img4 {
+  background-image: url(../../img/4.jpg);
+}
+
+
+.small#img1 {
+  background-image: url(../../img/5.jpg);
+}
+
+.small#img2 {
+  background-image: url(../../img/6.jpg);
+}
+
+.small#img3 {
+  background-image: url(../../img/7.jpg);
+}
+
+.small#img4 {
+  background-image: url(../../img/8.jpg);
+}
+
+.small#img5 {
+  background-image: url(../../img/9.jpg);
+}
+
+.small#img6 {
+  background-image: url(../../img/10.jpg);
+}
+
+.small#img7 {
+  background-image: url(../../img/11.jpg);
+}
+
+.small#img8 {
+  background-image: url(../../img/12.jpg);
+}
