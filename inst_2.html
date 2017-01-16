@@ -3,7 +3,75 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style_2/style.css">
-    <title></title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+  	<title>jQuery плагин горизонтальной прокрутки контента | pcvector.net</title>
+  	<link rel="shortcut icon" href="/favicon.ico" />
+  	<!-- the CSS for Smooth Div Scroll -->
+  	<link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
+
+  	<!-- Styles for my specific scrolling content -->
+  	<style type="text/css">
+  		#makeMeScrollable
+  		{
+  			width:100%;
+  			height: 330px;
+  			position: relative;
+  			margin:50px auto;
+  		}
+
+  		/* Replace the last selector for the type of element you have in
+  		   your scroller. If you have div's use #makeMeScrollable div.scrollableArea div,
+  		   if you have links use #makeMeScrollable div.scrollableArea a and so on. */
+  		#makeMeScrollable div.scrollableArea img
+  		{
+  			position: relative;
+  			float: left;
+  			margin: 0;
+  			padding: 0;
+  			/* If you don't want the images in the scroller to be selectable, try the following
+  			   block of code. It's just a nice feature that prevent the images from
+  			   accidentally becoming selected/inverted when the user interacts with the scroller. */
+  			-webkit-user-select: none;
+  			-khtml-user-select: none;
+  			-moz-user-select: none;
+  			-o-user-select: none;
+  			user-select: none;
+  		}
+  	</style>
+  	<style>
+  	body{background:#323232;}
+  	.more ul {
+  		list-style:none;
+  		font-family: Arial,sans-serif;
+  		font-size: 13px;
+  		font-weight: bold;
+  		height: 30px;
+  		margin: 0 0 30px;
+  		padding: 20px 0 10px 20px;
+  		text-transform: uppercase;
+  		width: 90%;
+  	}
+  	.more ul li {
+  		float: left;
+  		margin: 5px 3px;
+  	}
+  	.more ul li.selected a, .more ul li.selected a:hover {
+  		background: none repeat scroll 0 0 #c2c2c2;
+  		border-radius: 5px 5px 5px 5px;
+  		color: #444;
+  		text-shadow: none;
+  	}
+  	.more ul li a {
+  		color: #bebebe;
+  		padding: 3px 6px;
+  		text-shadow: 1px 1px 1px #000;
+  		text-decoration:none;
+  	}
+  	.more ul li a:hover {
+  		color: #fff;
+  	}
+  	</style>
   </head>
   <body>
     <nav class="menu">
@@ -21,28 +89,95 @@
         </div>
         <div>
     </nav>
-          <div class="gallery">
-            <figure class="big" id="img1"></figure>
-            <div class="small">
-              <figure class="small" id="img1"></figure>
-              <figure class="small" id="img2"></figure>
-            </div>
-            <figure class="big" id="img2"></figure>
-            <div class="small">
-              <figure class="small" id="img3"></figure>
-              <figure class="small" id="img4"></figure>
-            </div>
-            <figure class="big" id="img3"></figure>
-            <div class="small">
-              <figure class="small" id="img5"></figure>
-              <figure class="small" id="img6"></figure>
-            </div>
-            <figure class="big" id="img4"></figure>
-            <div class="small">
-              <figure class="small" id="img7"></figure>
-              <figure class="small" id="img8"></figure>
+
+
+        <div id="makeMeScrollable">
+          <div class="scrollingHotSpotLeft" style="opacity: 0;">
+          </div>
+          <div class="scrollingHotSpotRight" style="opacity: 0;">
+          </div>
+          <div class="scrollWrapper">
+            <div class="scrollableArea" style="width: 3810px;">
+              <div class="gallery">
+                <figure class="big" id="img1"></figure>
+                <div class="small">
+                  <figure class="small" id="img1"></figure>
+                  <figure class="small" id="img2"></figure>
+                </div>
+                <figure class="big" id="img2"></figure>
+                <div class="small">
+                  <figure class="small" id="img3"></figure>
+                  <figure class="small" id="img4"></figure>
+                </div>
+                <figure class="big" id="img3"></figure>
+                <div class="small">
+                  <figure class="small" id="img5"></figure>
+                  <figure class="small" id="img6"></figure>
+                </div>
+                <figure class="big" id="img4"></figure>
+                <div class="small">
+                  <figure class="small" id="img7"></figure>
+                  <figure class="small" id="img8"></figure>
+                </div>
+              </div>
+
+              <!-- LOAD JAVASCRIPT LATE - JUST BEFORE THE BODY TAG 
+	              That way the browser will have loaded the images
+		              and will know the width of the images. No need to
+		                specify the width in the CSS or inline. -->
+
+	                  <!-- jQuery library - Please load it from Google API's -->
+	                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+
+	                    <!-- jQuery UI Widget and Effects Core (custom download)
+	                      You can make your own at: http://jqueryui.com/download -->
+	                      <script src="js/jquery-ui-1.8.23.custom.min.js" type="text/javascript"></script>
+
+	                        <!-- Latest version (3.0.6) of jQuery Mouse Wheel by Brandon Aaron
+	                        You will find it here: http://brandonaaron.net/code/mousewheel/demos -->
+	                          <script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
+
+	                          <!-- jQuery Kinectic (1.5) used for touch scrolling -->
+	                            <script src="js/jquery.kinetic.js" type="text/javascript"></script>
+
+	                            <!-- Smooth Div Scroll 1.3 minified-->
+	                              <script src="js/jquery.smoothdivscroll-1.3-min.js" type="text/javascript"></script>
+
+	                              <!-- If you want to look at the uncompressed version you find it at
+	                                js/jquery.smoothDivScroll-1.3.js -->
+
+	                                <!-- Plugin initialization -->
+	                                  <script type="text/javascript">
+		                                  // Initialize the plugin with no custom options
+		                                    $(document).ready(function () {
+			                                      // None of the options are set
+			                                          $("div#makeMeScrollable").smoothDivScroll({
+				                                              mousewheelScrolling: "allDirections",
+				                                                  manualContinuousScrolling: true,
+				                                                      autoScrollingMode: "onStart"
+			                                                        });
+		                                                          });
+	                                                              </script>
+
+                                                                <!-- AddThis Button BEGIN -->
+                                                                <script type="text/javascript">
+                                                                function toggle_show(a){document.getElementById(a).style.display="none"==document.getElementById(a).style.display?"block":"none";setTimeout(showHide,2E4)}function showHide(){if(document.getElementById("addshow")){var a=document.getElementById("addshow");"block"!=a.style.display&&(a.style.display="block")}};</script>
+                                                                <div id="addshow" class="addshare addthis_toolbox addthis_floating_style addthis_counter_style">
+                                                                <div id="addshare" onClick="toggle_show('addshow')">x</div>
+                                                                <a class="addthis_button_tweet" tw:count="vertical" tw:lang="en"></a>
+                                                                <a class="addthis_button_facebook_like" fb:like:layout="box_count" fb:like:locale="en_US"></a>
+                                                                <a class="addthis_button_google_plusone" g:plusone:size="tall"></a>
+                                                                <a class="addthis_counter"></a>
+                                                                </div>
+                                                                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                                                                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f3985a80cce5801"></script>
+                                                                <!-- AddThis Button END -->
+                                                                <!-- pcvector.net -->
+                                                                <script type="text/javascript" src="http://pcvector.net/templates/pcv/js/pcvector.js"></script>
+                                                                <!-- /pcvector.net -->
             </div>
           </div>
+        </div>
 
       </div>
     </div>
