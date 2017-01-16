@@ -1,6 +1,6 @@
 .menu {
   display: flex;
-  height: 96vh;
+  height: 100vh;
   justify-content: space-between;
   flex-direction: column;
   position: fixed;
@@ -61,9 +61,9 @@ div.scrollingHotSpotLeft
 {
 	/* The hotspots have a minimum width of 100 pixels and if there is room the will grow
     and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */
-	min-width: 75px;
+	min-width: 1px;
 	width: 10%;
-	height: 100%;
+	height: 700px;
 	/* There is a big background image and it's used to solve some problems I experienced
     in Internet Explorer 6. */
 	background-image: url(../../img/big_transparent.gif);
@@ -91,9 +91,9 @@ div.scrollingHotSpotLeftVisible
 /* Invisible right hotspot */
 div.scrollingHotSpotRight
 {
-	min-width: 75px;
+	min-width: 1px;
 	width: 10%;
-	height: 100%;
+	height: 700px;
 	background-image: url(../../img/big_transparent.gif);
 	background-repeat: repeat;
 	background-position: center center;
@@ -132,37 +132,6 @@ div.scrollableArea
 	width: auto;
 	height: 100%;
 }
-
-/*div.scrollingHotSpotLeft {
-    min-width: 75px;
-    width: 10%;
-    height: 100%;
-    background-image: url(http://pcvector.net/uploads/demo/scripts/slideshow_and_scroller/smooth_div_scroll/images/big_transparent.gif);
-    background-repeat: repeat;
-    background-position: center center;
-    position: absolute;
-    z-index: 200;
-    left: 0;
-    cursor: url(../../img/curs_left.png), url(../../img/curs_left.cur),w-resize;
-}
-
-div.scrollingHotSpotRight {
-    min-width: 75px;
-    width: 10%;
-    height: 100%;
-    background-image: url(http://pcvector.net/uploads/demo/scripts/slideshow_and_scroller/smooth_div_scroll/images/big_transparent.gif);
-    background-repeat: repeat;
-    background-position: center center;
-    position: absolute;
-    z-index: 200;
-    right: 0;
-    cursor: url(../../img/curs_right.png), url(../../img/curs_right.cur),e-resize;
-}
-
-div {
-    display: block;
-}*/
-
 
 figure {
   display: inline-block;

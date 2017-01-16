@@ -15,9 +15,9 @@
   		#makeMeScrollable
   		{
   			width:100%;
-  			height: 330px;
+  			height: 630px;
   			position: relative;
-  			margin:50px auto;
+  			margin: 0px auto;
   		}
 
   		/* Replace the last selector for the type of element you have in
@@ -27,8 +27,8 @@
   		{
   			position: relative;
   			float: left;
-  			margin: 0;
-  			padding: 0;
+  			margin: -1;
+  			padding: 1;
   			/* If you don't want the images in the scroller to be selectable, try the following
   			   block of code. It's just a nice feature that prevent the images from
   			   accidentally becoming selected/inverted when the user interacts with the scroller. */
@@ -121,7 +121,7 @@
                 </div>
               </div>
 
-              <!-- LOAD JAVASCRIPT LATE - JUST BEFORE THE BODY TAG 
+              <!-- LOAD JAVASCRIPT LATE - JUST BEFORE THE BODY TAG
 	              That way the browser will have loaded the images
 		              and will know the width of the images. No need to
 		                specify the width in the CSS or inline. -->
@@ -162,10 +162,7 @@
                                                                 <!-- AddThis Button BEGIN -->
                                                                 <script type="text/javascript">
                                                                 function toggle_show(a){document.getElementById(a).style.display="none"==document.getElementById(a).style.display?"block":"none";setTimeout(showHide,2E4)}function showHide(){if(document.getElementById("addshow")){var a=document.getElementById("addshow");"block"!=a.style.display&&(a.style.display="block")}};</script>
-                                                                <div id="addshow" class="addshare addthis_toolbox addthis_floating_style addthis_counter_style">
                                                                 <div id="addshare" onClick="toggle_show('addshow')">x</div>
-                                                                <a class="addthis_button_tweet" tw:count="vertical" tw:lang="en"></a>
-                                                                <a class="addthis_button_facebook_like" fb:like:layout="box_count" fb:like:locale="en_US"></a>
                                                                 <a class="addthis_button_google_plusone" g:plusone:size="tall"></a>
                                                                 <a class="addthis_counter"></a>
                                                                 </div>
