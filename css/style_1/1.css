@@ -1,0 +1,78 @@
+figure {
+  display: inline-block;
+  background-size: cover;
+}
+
+div.gallery {
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+div.small {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  padding: 0 5px 0 5px;
+}
+
+figure.big {
+  width: 100vh;
+  height: 100vh;
+}
+
+figure.small {
+  width: calc(50vh - 2.5px);
+  height: calc(50vh - 2.5px);
+}
+.big#img1 {
+  background-image: url(../../img/1.jpg);
+}
+
+.big#img2 {
+  background-image: url(../../img/2.jpg);
+}
+
+.big#img3 {
+  background-image: url(../../img/3.jpg);
+}
+
+.big#img4 {
+  background-image: url(../../img/4.jpg);
+}
+
+
+.small#img1 {
+  background-image: url(../../img/5.jpg);
+}
+
+.small#img2 {
+  background-image: url(../../img/6.jpg);
+}
+
+.small#img3 {
+  background-image: url(../../img/7.jpg);
+}
+
+.small#img4 {
+  background-image: url(../../img/8.jpg);
+}
+
+.small#img5 {
+  background-image: url(../../img/9.jpg);
+}
+
+.small#img6 {
+  background-image: url(../../img/10.jpg);
+}
+
+.small#img7 {
+  background-image: url(../../img/11.jpg);
+}
+
+.small#img8 {
+  background-image: url(../../img/12.jpg);
+}
