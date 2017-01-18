@@ -2,23 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style_2/style.css">
+    <link rel="stylesheet" href="css/style_3/style.css">
 
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
   	<title>Yanis.Gallery</title>
   	<!-- the CSS for Smooth Div Scroll -->
-  	<link rel="Stylesheet" type="text/css" href="css/style_2/smoothDivScroll.css" />
+  	<link rel="Stylesheet" type="text/css" href="css/style_2/smoothDivScroll_3.css" />
 
   	<!-- Styles for my specific scrolling content -->
   	<style type="text/css">
 
-      #makeMeScrollable
-  		{
-  			width:100%;
-  			height: 100vh;
-  			position: relative;
-  			margin: 0px auto;
-  		}
+    #makeMeScrollable {
+      width: 51%;
+      height: 90vh;
+      position: relative;
+      margin: 0px auto;
+      margin-top: 130px;
+    }
 
   		/* Replace the last selector for the type of element you have in
   		   your scroller. If you have div's use #makeMeScrollable div.scrollableArea div,
@@ -75,7 +75,7 @@
   	</style>
   </head>
   <body>
-    <nav class="menu">
+    <!-- <nav class="menu">
       <div class="header">
         <div>
           <a href="#">О себе</a>
@@ -89,7 +89,7 @@
           <a href="https://www.instagram.com/yanismats/" target="_blank">Перейти в инстаграм</a>
         </div>
         <div>
-    </nav>
+    </nav> -->
 
 
         <div id="makeMeScrollable">
@@ -164,13 +164,13 @@
 		                $(document).ready(function () {
 			            // None of the options are set
 			                $("div#makeMeScrollable").smoothDivScroll({
-                        mousewheelScrolling: "allDirections",
-  				              manualContinuousScrolling: true,
-  				              autoScrollingMode: "onStart",
-                        hotSpotScrollingInterval: 20,
-                        hotSpotMouseDownSpeedBooster: 7,
-                        // Используй тут значение "always" при верстке боковых кнопок
-                        visibleHotSpotBackgrounds: "hover",
+				              mousewheelScrolling: "allDirections",
+				              manualContinuousScrolling: true,
+				              autoScrollingMode: "onStart",
+                      hotSpotScrollingInterval: 20,
+                      hotSpotMouseDownSpeedBooster: 7,
+                      // Используй тут значение "always", а так всегда "hover" при верстке боковых кнопок
+                      visibleHotSpotBackgrounds: "always",
 			              });
 		                });
 	                  </script>
@@ -184,6 +184,25 @@
                     <!-- pcvector.net -->
                     <script type="text/javascript" src="http://pcvector.net/templates/pcv/js/pcvector.js"></script>
                     <!-- /pcvector.net -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             </div>
           </div>
