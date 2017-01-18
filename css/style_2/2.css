@@ -29,7 +29,8 @@
   background: #262626;
 }
 
-.footer:hover a {
+.footer,
+.header:hover a {
   color: #cccccc;
 }
 

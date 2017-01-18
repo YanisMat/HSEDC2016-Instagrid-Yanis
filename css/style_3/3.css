@@ -6,6 +6,7 @@
   position: fixed;
   width: 100%;
   z-index: 1;
+  margin-top: -129px;
 }
 
 .menu a {
@@ -14,11 +15,6 @@
   font-weight: 200;
   color: #bfbfbf;
   text-decoration: none;
-}
-
-.header {
-  display: flex;
-  justify-content: center;
 }
 
 .header,
@@ -34,11 +30,12 @@
   background: #262626;
 }
 
-.footer:hover a {
+.footer,
+.header:hover a {
   color: #cccccc;
 }
 
-.footer {
+.footer, {
   box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.50);
 }
 
@@ -58,7 +55,6 @@
 .footer div {
   justify-content: center;
 }
-
 
 figure {
   display: inline-block;
